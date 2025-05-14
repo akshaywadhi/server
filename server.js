@@ -10,7 +10,9 @@ const app = express()
 const port = process.env.PORT || 5000
 
 
-app.use(cors())
+app.use(cors({
+  origin : 'https://client-swart-six-73.vercel.app'
+}))
 app.use(express.json())
 app.use('/api', router)
 
